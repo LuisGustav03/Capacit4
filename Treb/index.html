@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Passagens Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>L&A Passagens</h1>
+        <form id="formPassagens">
+            <div class="form-group">
+                <label for="origem">Origem:</label>
+                <input type="text" id="origem" name="origem" required>
+                <span class="error" id="erroOrigem" style="display:none;">Por favor, insira o local de origem.</span>
+            </div>
+            <div class="form-group">
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" name="destino" required>
+                <span class="error" id="erroDestino" style="display:none;">Por favor, insira o local de destino.</span>
+            </div>
+            <div class="form-group">
+                <label for="quantidade">Quantidade de Passagens:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" required>
+                <span class="error" id="erroQuantidade" style="display:none;">Por favor, insira a quantidade de passagens.</span>
+            </div>
+            <div class="form-group">
+                <label for="classe">Classe:</label>
+                <select id="classe" name="classe" required>
+                    <option value="" disabled selected>Selecione a classe</option>
+                    <option value="economica">Econômica</option>
+                    <option value="executiva">Executiva</option>
+                    <option value="primeira">Primeira Classe</option>
+                </select>
+                <span class="error" id="erroClasse" style="display:none;">Por favor, selecione a classe.</span>
+            </div>
+            <div class="form-group">
+                <label for="idaVolta">Passagens de Ida e Volta:</label>
+                <input type="checkbox" id="idaVolta" name="idaVolta">
+            </div>
+            <div class="form-group">
+                <a href="cidades.html" id="outrosDestinos">Não sabe para onde ir? Veja nossos destinos</a>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Buscar Passagens">
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
